@@ -1,0 +1,55 @@
+page-verification {
+  ion-content{
+    padding-top: 20vh;
+    background: url('../assets/images/background.jpg');
+    .list-ios[inset]{
+      margin: 20vh 16px 16px 16px;
+    }
+    .top{
+      text-align:center;
+      padding-top:10vh;
+    }
+  }
+  h4,
+  p {
+    text-align: center;
+  }
+
+  h4 {
+    color: primary;
+  }
+
+  p {
+    color: grey;
+  }
+
+  p span {
+    color: primary;
+  }
+  ion-icon{
+    color: primary;
+    font-size: 2.5em;
+  }
+  .list, .item{
+    background:transparent
+  }
+  .item-ios{
+    background: transparent;
+  }
+  .buttons {
+    margin-top: 10px;
+  }
+  ion-label{
+    font-weight:500;
+    color:primary;
+  }
+  ion-input{
+    color:#777;
+  }
+  .icon-main{
+    width: 95px;
+  }
+  .text-underline{
+      text-decoration: underline;
+  }
+}

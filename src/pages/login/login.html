@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item class="logo">
+        <div class="logo-part">
+            <img src="assets/imgs/download.png" width="90">
+        </div>
+      </ion-item>
+    <div class="bg-box">
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+    <ion-item>
+      <!-- <ion-label stacked>Email</ion-label> -->
+      <ion-input #email formControlName="email" type="email" placeholder="Your email address"
+        [class.invalid]="!loginForm.controls.email.valid &&
+          loginForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  &&
+      loginForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+    <ion-item>
+      <!-- <ion-label stacked>Password</ion-label> -->
+      <ion-input #password formControlName="password" type="password" placeholder="Your password"
+        [class.invalid]="!loginForm.controls.password.valid &&
+          loginForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  &&
+      loginForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button block type="submit" class="login-btn" style="    background-color: #ff4848 !important;">
+      Login
+    </button>
+  </form> 
+
+
+  <!-- <div style="border: 1px solid grey;">
+   <ion-list inset>
+    <form [formGroup]="emailPasswordForm">
+      <div id="recaptcha-container"></div>
+      <ion-item>
+        <ion-label stacked>Phone Number</ion-label>
+        <ion-input type="number" formControlName="phoneNumber"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <button ion-button color="primary" block tappable (click)="signIn()" [disabled]="!emailPasswordForm.valid">Log in</button>
+        </ion-col>
+      </ion-row>
+      </form>
+  </ion-list>
+  </div> -->
+    <br><br>
+  <!-- <div style="border: 1px solid grey;">
+<button ion-button block round outline (click)="goToResetPassword()">
+  Forgot Password
+</button>
+  </div>
+<button ion-button round block outline (click)="createAccount()">
+Create a new account
+</button>
+
+<br><br>
+<button ion-button full color="danger" (click)="loginwithgoogle()">
+    <ion-icon ios="logo-googleplus" md="logo-googleplus" style="font-size: 1.92em;"></ion-icon> 
+</button>
+
+<button ion-button full (click)="facebookLogin()">
+   <ion-icon ios="logo-facebook" md="logo-facebook" style="font-size: 1.92em;"></ion-icon>
+</button>
+<button ion-button full style="background-color: #093a92;" (click)="loginwithlinkedIn()">
+  <ion-icon ios="logo-linkedin" md="logo-linkedin" style="font-size: 1.92em;"></ion-icon>
+</button> -->
+
+<div class="line-or"></div>
+<ul class="social">
+   <li (click)="facebookLogin()">
+    <img src="assets/icon/facebook.png" width="34">
+  </li>
+  <li (click)="googleplusLogin()">
+    <img src="assets/icon/google-plus.png" width="34">
+  </li>
+  <li (click)="loginwithlinkedIn()">
+    <img src="assets/icon/linkedin.png" width="34">
+  </li>
+  
+</ul>
+</div>
+<a  block (click)="createAccount()" class="sing-up">
+  Not Signed in Yet ? <strong> Sign Up Now</strong>
+ </a>
+ <a  block (click)="goToResetPassword()" class="sing-up">
+    Forgot password ? <strong> Reset Password Now</strong>
+   </a>
+  
+
+  
+
+
+</ion-content>

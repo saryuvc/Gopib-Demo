@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Gopib</ion-title>
+    <ion-buttons end style="background: #eaeadb;">
+        <button ion-button icon-only (click)="signOut()">
+          <ion-icon name="power"></ion-icon>
+        </button>
+        </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <h2 class="page-title" style="text-align: center;">My Contact</h2>
+  <ion-item *ngFor="let contact of invitelistToShow">   
+    <ion-avatar item-left>
+      <img src="assets/imgs/avatar.png">
+    </ion-avatar>
+    <h2> {{contact.displayName}}</h2>
+    <h3> {{contact.phoneNumbers[0].value}}</h3>
+
+    <ion-item class="contact-list-check">
+      <ion-checkbox (ionChange)="onChange(contact.phoneNumbers[0].value, $event.checked)" value="contact.phoneNumbers[0].value"></ion-checkbox>
+    </ion-item>
+    
+  </ion-item>
+
+
+  <div *ngIf="!invitelistToShow">
+    No contacts To Display!
+  </div>
+</ion-content>
+  

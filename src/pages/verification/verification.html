@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Verify your account</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="top">
+      <img class="icon-main" src='assets/images/logo.png'/>
+    </div>
+  <ion-list inset>
+    <form [formGroup]="verificationForm">
+      <!--<h4 class="title">Verify your account</h4>-->
+      <p>Please verify <span>{{phoneNumber}}</span> to continue.<span (click)="setPhoneNumberAgain()"><br>Wrong number?</span></p>
+      <!-- Verification Menu -->
+      <ion-item>
+        <ion-label stacked>OTP</ion-label>
+        <ion-input type="number" formControlName="confirmCode"></ion-input>
+      </ion-item>
+      <div id="recaptcha-container"></div>
+      <ion-row class="buttons">
+        <ion-col>
+          <button ion-button color="primary" block tappable (click)="register()" [disabled]="!verificationForm.valid">Verify</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="graybtn" block tappable (click)="sendPhoneVerification()" [disabled]="resendDisabled">
+            {{sendTimer}}
+          </button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

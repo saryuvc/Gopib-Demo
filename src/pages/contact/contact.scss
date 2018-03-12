@@ -1,0 +1,77 @@
+page-contact {  
+   
+    .scroll-content{
+        padding: 0px !important;
+    }
+    .toolbar-background{
+        background: rgba(255,0,0,1) !important;
+    background: -moz-linear-gradient(top, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 6%, rgba(255,0,0,1) 23%, rgba(255,48,0,1) 36%, rgba(255,70,0,1) 42%, rgba(255,132,0,1) 59%, rgba(255,132,0,1) 72%, rgba(255,132,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,0,0,1)), color-stop(6%, rgba(255,0,0,1)), color-stop(23%, rgba(255,0,0,1)), color-stop(36%, rgba(255,48,0,1)), color-stop(42%, rgba(255,70,0,1)), color-stop(59%, rgba(255,132,0,1)), color-stop(72%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
+    background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 6%, rgba(255,0,0,1) 23%, rgba(255,48,0,1) 36%, rgba(255,70,0,1) 42%, rgba(255,132,0,1) 59%, rgba(255,132,0,1) 72%, rgba(255,132,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 6%, rgba(255,0,0,1) 23%, rgba(255,48,0,1) 36%, rgba(255,70,0,1) 42%, rgba(255,132,0,1) 59%, rgba(255,132,0,1) 72%, rgba(255,132,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 6%, rgba(255,0,0,1) 23%, rgba(255,48,0,1) 36%, rgba(255,70,0,1) 42%, rgba(255,132,0,1) 59%, rgba(255,132,0,1) 72%, rgba(255,132,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 6%, rgba(255,0,0,1) 23%, rgba(255,48,0,1) 36%, rgba(255,70,0,1) 42%, rgba(255,132,0,1) 59%, rgba(255,132,0,1) 72%, rgba(255,132,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff8400', GradientType=0 );
+      }
+    .contact-list-check{
+        position: absolute;
+    right: 0;
+    width: auto;
+    padding: 0;
+    height: 30px;
+    float: left;
+    border: none;
+    ion-checkbox{
+        padding: 0px;
+        margin: 0px !important;
+    }
+    }
+    ion-item{
+
+            border-bottom:1px solid #dedede !important;
+            padding: 5px 15px !important;
+            ion-avatar{
+                padding: 5px;
+                margin: 0 10px 0px 0px !important;
+                img{
+                    min-width: 60px !important;
+                    min-height: 60px !important;
+                    border:1px solid #d2d1d1;
+                }
+            }
+            .item-inner{
+                border-bottom: none !important;
+                ion-label{
+                    h2{
+                        font-size: 1.2em;
+                        color: #2a2a2a;
+                    }
+                    p{
+                        color: #5b5b5b;
+                        font-size: 0.9em;
+                        padding: 5px 0 0 0;
+                    }
+                }
+            }
+            ion-item{
+               border-bottom: none !important;
+               .checkbox-icon{
+                border-width: 1px !important;
+                border-color: #888686;
+            }
+            }
+            .checkbox-ios .checkbox-icon{
+                border-radius: 0px;
+            }
+            
+        }
+        .page-title{
+            background: #eceff1;
+            padding: 15px 20px 10px 20px;
+            margin: 0;
+            font-size: 1.13em;
+            color: #989899;
+            font-weight: 600;
+        }
+
+}
